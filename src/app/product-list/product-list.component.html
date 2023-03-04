@@ -1,8 +1,25 @@
 <h2>Products</h2>
 
+<div *ngFor="let product of products">
+  <h3>
+    <a [title]="product.name + ' details'">
+      {{ product.name }}
+    </a>
+  </h3>
 
+  <p *ngIf="product.description">Description: {{ product.description }}</p>
+
+  <button type="button" (click)="share()">Share</button>
+</div>
 <!-- 
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at https://angular.io/license
 -->
+
+<!--
+    <h3>{{ product.name }}</h3>
+    A instrução é um exemplo da sintaxe de interpolação do Angular. A interpolação {{ }} permite renderizar o valor da propriedade como texto.
+
+    A associação de propriedade [ ]permite usar o valor da propriedade em uma expressão de modelo.
+  -->
